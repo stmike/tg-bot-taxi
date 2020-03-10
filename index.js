@@ -6,7 +6,7 @@ const serviceAccount = require('./secret/serviceAccountKey.json');
 // Инициализируем Firestore:
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://tg-bot-taxi.firebaseio.com"
+  databaseURL: "https://your-project-name.firebaseio.com"
 });
 
 // Подключение к БД:
@@ -15,11 +15,11 @@ const server = admin.firestore;
 let usersRef;
 
 // Вебхук Битрикс24. ДЕРЖИТЕ В ТАЙНЕ!
-// Получаем в консоли Битрикс24 (вид URL будет как показан здесь, только вместо xxxxxxxxxxxx -- актуальное значение): 
+// Получаем в консоли Битрикс24 (вид URL будет как показан здесь, только вместо your-name и xxxxxxx -- актуальные значения): 
 // (Ещё) --> Приложения --> Вебхуки (вкладка) --> Добавить вебхук (кнопка) --> Входящий вебхук (выпадающий список). 
 // Затем поставить чекбокс напротив CRM (crm).
 // Последнюю часть URL сгенерированного вебхука /profile/ удалить, и заменить на: /crm.lead.add.json (как показано здесь):
-const bitrix24Webhook = 'https://zaharov.bitrix24.ru/rest/1/d3nag402877pde9y/crm.lead.add.json';
+const bitrix24Webhook = 'https://your-name.bitrix24.ru/rest/1/xxxxxxxxxxxx/crm.lead.add.json';
 
 
 // Тело Yndex Cloude Function:
