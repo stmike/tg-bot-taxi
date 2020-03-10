@@ -6,7 +6,7 @@ const serviceAccount = require('./secret/serviceAccountKey.json'); // это д�
 // Инициализируем Firestore:
 admin.initializeApp({
   credential: admin.credential.cert(serviceAccount),
-  databaseURL: "https://your-project-name.firebaseio.com"
+  databaseURL: "https://your-project-name.firebaseio.com" // вместо your-project-name должно быть указано актуальное имя
 });
 
 // Подключение к БД:
