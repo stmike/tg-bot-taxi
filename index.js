@@ -1,7 +1,7 @@
 const admin = require('firebase-admin');
 const fetch = require('node-fetch');
 const { includes, isEmpty, lowerCase, random } = require('lodash');
-const serviceAccount = require('./secret/serviceAccountKey.json'); // здесь должен быть ваш собственный ключ
+const serviceAccount = require('./secret/serviceAccountKey.json'); // это должен быть ваш собственный ключ
 
 // Инициализируем Firestore:
 admin.initializeApp({
